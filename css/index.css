@@ -42,6 +42,7 @@
       justify-content: center;
       align-items: center;
       background-color: #222;
+      border-radius: 10px;
     }
     
     #top-left {
@@ -86,4 +87,39 @@
         min-height: 100px;
         min-width: 150px;
 
+      }
+
+      #winBox {
+        position:absolute;
+        background-color: aliceblue;
+        height: 400px;
+        width: 500px;
+        z-index: 100;
+        display: none;
+      }
+
+      #overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, .5);
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+
+      #winBox {
+        margin-top: 10%;
+        margin-left: 25%;
+      }
+
+      #whoWon {
+        text-align: center;
+      }
+
+      #restartGame {
+       margin-left: 175px;
+      }
+
+      #title {
+        color: white;
+        font-weight: bolder;
       }

@@ -9,6 +9,7 @@ const start = document.getElementById('start2')
 const reset = document.getElementById('stop2')
 let stopPlayer
 let stopComputer
+const restartGame = document.getElementById('restartGame')
 
 canvas.setAttribute('width', getComputedStyle(canvas)['width'])
 canvas.setAttribute('height', getComputedStyle(canvas)['height'])
@@ -79,7 +80,7 @@ function countdown() {
 
         function gameStart() {
             document.addEventListener('keyup', playerMovement)
-            stopPlayer = setInterval(gameLoop, 250)
+            stopPlayer = setInterval(gameLoop, 200)
         } 
     }
 
@@ -107,6 +108,7 @@ computer.render()
     finishLine5.render()
     finishLine6.render()
     finishLine7.render()
+    off()
 }
  reset.addEventListener('click', resetGame)
 
@@ -122,6 +124,23 @@ const playerMovement = (p) => {
     }
 }
 
+function off() {
+    document.getElementById('overlay').style.display = "none";
+    document.getElementById('winBox').style.display = "none";
+}
+
+function on() {
+    document.getElementById('overlay').style.display = "block";
+    document.getElementById('winBox').style.display = "block";
+}
+
+function playerWon() {
+    document.getElementById('whoWon').innerHTML = "You Won!";
+}
+
+function computerWon() {
+    document.getElementById('whoWon').innerHTML = "You Lose!";
+}
 
 const detectCross = (line) => {
     if(playerOne.x < line.x + line.width
@@ -129,7 +148,8 @@ const detectCross = (line) => {
         && playerOne.y < line.y + line.height
         && playerOne.y + playerOne.height > line.y) {
         win = true
-            console.log('you win')
+            on()
+            playerWon()
     }
 }
 
@@ -139,11 +159,12 @@ const detectComputerCross = (line) => {
         && computer.y < line.y + line.height
         && computer.y + computer.height > line.y) {
         win = true
-            console.log('you lose')
+        on()
+        computerWon()
     }
 }
 
-
+restartGame.addEventListener('click', resetGame)
 
 
 const gameLoop = () => {
@@ -175,3 +196,4 @@ const gameLoop = () => {
     finishLine6.render()
     finishLine7.render()
 }
+
