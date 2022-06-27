@@ -1,125 +1,158 @@
 #container {
-    max-width: 80em;
-    height: 90vh;
-    background-color: rgb(0, 70, 245);
-    margin: 0 auto;
-    padding: 1em;
-    display: grid;
-    grid-gap: 1em;
-    grid-template-rows: .25fr .5fr .25fr .10fr;
-    grid-template-columns: .25fr .5fr .25fr .10fr;
-    grid-template-areas: "top-left top-left top-right top-right"
-                         "game game game light"
-                         "btm-left btm-right stop start";
+  max-width: 80em;
+  height: 90vh;
+  background-color: rgb(0, 70, 245);
+  margin: 0 auto;
+  padding: 1em;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: .25fr .5fr .25fr .10fr;
+  grid-template-columns: .25fr .5fr .25fr .10fr;
+  grid-template-areas: "top-left top-left top-right top-right"
+                       "game game game light"
+                       "btm-left btm-right stop start";
+  }
+  
+  #light {
+      background-color: dimgray;
+      width: 100%;
+      height: 100%
+  }
+
+  .yellow {
+      background-color: black;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin: auto;
+      margin-top: 10px;
+  }
+
+  .green {
+      background-color: black;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin: auto;
+      margin-top: 10px;
+  }
+
+  #top-left, #top-right, #btm-left, #btm-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+  }
+  
+  #top-left {
+    grid-area: top-left;
+  }
+  
+  #top-right {
+    grid-area: top-right;
+  }
+  
+  main {
+    grid-area: game;
+  }
+  
+  
+  #btm-left {
+    grid-area: btm-left;
+  }
+  
+  #btm-right {
+    grid-area: btm-right;
+  }
+
+  canvas {
+      background-color: rgb(55, 54, 54);
+      width: 1050px;
+      height: 253.45px;
     }
-    
-    #light {
-        background-color: dimgray;
-        width: 100%;
-        height: 100%
+
+    .start1 {
+      margin-right: 5px;
+      background-color: greenyellow;
     }
 
-    .yellow {
-        background-color: black;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        margin: auto;
-        margin-top: 10px;
+    .stop1 {
+      margin-left: 5px;
+      background-color: red;
     }
 
-    .green {
-        background-color: black;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        margin: auto;
-        margin-top: 10px;
+    button {
+      border-radius: 50%;
+      min-height: 100px;
+      min-width: 150px;
+
     }
 
-    #top-left, #top-right, #btm-left, #btm-right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #222;
-      border-radius: 10px;
-    }
-    
-    #top-left {
-      grid-area: top-left;
-    }
-    
-    #top-right {
-      grid-area: top-right;
-    }
-    
-    main {
-      grid-area: game;
-    }
-    
-    
-    #btm-left {
-      grid-area: btm-left;
-    }
-    
-    #btm-right {
-      grid-area: btm-right;
+    #winBox {
+      position:absolute;
+      background-color: rgb(0, 167, 245);
+      height: 400px;
+      width: 500px;
+      z-index: 100;
+      display: none;
     }
 
-    canvas {
-        background-color: black;
-        width: 670px;
-        height: 100%;
-      }
+    #overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, .5);
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
 
-      .start1 {
-        margin-right: 5px;
-        background-color: greenyellow;
-      }
+    #winBox {
+      margin-top: 10%;
+      margin-left: 25%;
+    }
 
-      .stop1 {
-        margin-left: 5px;
-        background-color: red;
-      }
+    #whoWon {
+      text-align: center;
+    }
 
-      button {
-        border-radius: 50%;
-        min-height: 100px;
-        min-width: 150px;
+    #restartGame {
+     margin-left: 175px;
+     background-color: greenyellow;
+    }
 
-      }
+    #title {
+      color: white;
+      font-weight: bolder;
+      font-size: 50px;
+    }
 
-      #winBox {
-        position:absolute;
-        background-color: aliceblue;
-        height: 400px;
-        width: 500px;
-        z-index: 100;
-        display: none;
-      }
+    #switch {
+      width:100px;
+      height: 50px;
+    }
 
-      #overlay {
-        position: absolute;
-        background-color: rgba(0, 0, 0, .5);
-        width: 100%;
-        height: 100%;
-        display: none;
-      }
+    .label {
+      color: white;
+    }
 
-      #winBox {
-        margin-top: 10%;
-        margin-left: 25%;
-      }
+    #time {
+      color: white;
+      font-size: 100px;
+    }
 
-      #whoWon {
-        text-align: center;
-      }
+    #easy {
+      background-color: green;
+    }
 
-      #restartGame {
-       margin-left: 175px;
-      }
+    #medium {
+      background-color: orange;
+    }
 
-      #title {
-        color: white;
-        font-weight: bolder;
-      }
+    #hard {
+      background-color: red;
+    }
+
+    #howTo {
+      text-align: center;
+      color: white;
+    }
