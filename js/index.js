@@ -360,6 +360,7 @@ car2()
    seconds.innerHTML= '00'
    sec = 0
    mil = 0
+   clearInterval(timer)
 }
 
 reset.addEventListener('click', resetGame)
