@@ -67,9 +67,9 @@
     }
 
     canvas {
-        background-color: black;
-        width: 670px;
-        height: 100%;
+        background-color: rgb(55, 54, 54);
+        width: 1050px;
+        height: 253.45px;
       }
 
       .start1 {
@@ -91,7 +91,7 @@
 
       #winBox {
         position:absolute;
-        background-color: aliceblue;
+        background-color: rgb(0, 167, 245);
         height: 400px;
         width: 500px;
         z-index: 100;
@@ -117,9 +117,42 @@
 
       #restartGame {
        margin-left: 175px;
+       background-color: greenyellow;
       }
 
       #title {
         color: white;
         font-weight: bolder;
+        font-size: 50px;
+      }
+
+      #switch {
+        width:100px;
+        height: 50px;
+      }
+
+      .label {
+        color: white;
+      }
+
+      #time {
+        color: white;
+        font-size: 100px;
+      }
+
+      #easy {
+        background-color: green;
+      }
+
+      #medium {
+        background-color: orange;
+      }
+
+      #hard {
+        background-color: red;
+      }
+
+      #howTo {
+        text-align: center;
+        color: white;
       }

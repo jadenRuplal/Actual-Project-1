@@ -10,12 +10,19 @@
   <body>
     <div id="winBox">
       <h1 id="whoWon"></h1>
+      <h2 id="playerTime"></h2>
+      <h2 id="computerTime"></h2>
       <button id="restartGame">Restart Game</button>
     </div>
     <div id="overlay"></div>
     <div id="container">
       <aside id="top-left"><h2 id="title">Drag Racer: Click to Win</h2></aside>
-      <aside id="top-right"><h2></h2></aside>
+      <aside id="top-right">
+        <div id="time">
+          <span id="seconds">00</span> :
+          <span id="milliseconds">00</span>
+        </div>
+      </aside>
       <main>
         <canvas id="canvas"></canvas>
       </main>
@@ -31,8 +38,16 @@
         <button class="start1" id="start2">Start</button>
       </aside>
       <aside id="stop"><button class="stop1" id="stop2">Stop</button></aside>
-      <aside id="btm-left"><h2></h2></aside>
-      <aside id="btm-right"><h2></h2></aside>
+      <aside id="btm-left">
+        <h2 id="howTo">Click the right arrow to move forward</h2>
+      </aside>
+      <aside id="btm-right">
+        <h2>
+          <button id="easy">Easy</button>
+          <button id="medium">Medium</button>
+          <button id="hard">Hard</button>
+        </h2>
+      </aside>
     </div>
     <script src="js/index.js"></script>
   </body>
